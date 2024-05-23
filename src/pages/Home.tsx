@@ -4,7 +4,9 @@ function Home () {
 
     return(    
 
-        < header />  
+        <>
+          <h1> HOME </h1>
+        </>
     )
 }
 
