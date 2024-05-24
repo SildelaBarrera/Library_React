@@ -1,18 +1,16 @@
-import Logo from './Logo'
-import Menu from './Menu'
+import Logo from "./Logo";
+import Menu from "./Menu";
 
-function Header(){
+function Header () {
 
-    return (
 
-    <header className = "h-[70px] w-screen inline-flex place-content-between h-[70px] w-full border-4 border-black border-dotted bg-white text-black " > 
-        
-            <Logo></Logo>
-            <Menu />   
+  return (
+    <header className="px-4 bg-teal-400 flex items-center justify-between">
+      <Logo />
 
+      <Menu />
     </header>
-    )
-
+  );
 }
 
 export default Header;

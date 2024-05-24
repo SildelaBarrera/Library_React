@@ -1,24 +1,18 @@
-import Book from "../components/BookItem"
+// import Book from "../components/BookItem"
+import BookList from "../components/BookList"
 
 
 function BookPage() {
-    const book = {
-        id_book: 1,
-        id_user: 1,
-        title: 'Caperucita Roja',
-        author: 'Jacked Jhons',
-        photo:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTocjE_mrBvWiREmlE6-vvH8K1jEoT8TiMW43toYmsYfw&s',
-        price: 12.99,
-        type: 'Tapa dura'
-    }
-    const stilosHome = " border-2 border-black w-full min-h-[84vh]"
-
-
+    
+    const styleBookPage = " border-2 border-black border-solid";
     return (
-        <main className={stilosHome}>
-            <Book book={book}/>
+
+        <main className = {styleBookPage}>
+            <BookList/>
         </main>
     )
+
+   
 }
 
 export default BookPage
