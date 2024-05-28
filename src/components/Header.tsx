@@ -1,14 +1,31 @@
 import Logo from "./Logo";
 import Menu from "./Menu";
+import Sidebar from "./Sidebar";
+import { RxHamburgerMenu } from "react-icons/rx"; 
+import {useState} from "react";
+
 
 function Header () {
 
+  const [isOpenSidebar, setIsOpenSidebar] = useState(false);
 
   return (
-    <header className="px-4 bg-teal-400 flex items-center justify-between">
+    <header className="px-4 bg-blue-100 text-blue-400 flex items-center justify-between">
       <Logo />
+      
+      <div className = "hidden md:block">
+        <Menu />
+      </div>
+      
+      <button className="md:hidden relative z-10" onClick ={() => setIsOpenSidebar (!isOpenSidebar)}>
+          <RxHamburgerMenu size={30} className="text-blue-400 hover:text-sky-700"/>
+      </button>
 
-      <Menu />
+      {isOpenSidebar && <Sidebar isOpenSidebar = {isOpenSidebar}/>}
+
+      
+
+
     </header>
   );
 }

@@ -1,7 +1,17 @@
+import {Routes, Route} from "react-router-dom"
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import BookPage from "./pages/BookPage"
-// import HomePage from "./pages/HomePage"
+import Books from "./pages/Books"
+import Home from "./pages/Home"
+import AddBook from "./pages/AddBook"
+import EditBook from "./pages/EditBook"
+import Profile from "./pages/Profile"
+import Register from "./pages/Register"
+import LogIn from "./pages/LogIn"
+import PrivateRoutes from "./components/PrivateRoutes"
+import PublicRoutes from "./components/PrivateRoutes"
+
+
 
 function App() {
   console.log('<App/>');
@@ -11,8 +21,31 @@ function App() {
       <Header />
 
       <main className="grow">
-        <BookPage />
-        {/* <HomePage /> */}
+      
+        <Routes>
+          
+          <Route path="/" element={<Home/>}/>
+
+          <Route element={<PrivateRoutes />}>
+
+            <Route path="/books" element={<Books/>}/>
+            <Route path="/addbook" element={< AddBook/>}/>
+            <Route path="/editbook" element={<EditBook/>}/>
+            <Route path="/profile" element={<Profile/>}/>
+          
+          </Route>
+
+          <Route element={<PublicRoutes />}>
+
+            <Route path="/register" element={<Register/>}/>
+            <Route path="/Login" element={<LogIn/>}/>
+
+          </Route>
+
+
+        </Routes>
+
+
       </main>      
 
       <Footer />

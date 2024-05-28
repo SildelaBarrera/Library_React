@@ -5,7 +5,7 @@
 
 function Footer () {
   return (
-    <footer className="bg-teal-400 p-4 flex justify-center gap-4">
+    <footer className="bg-lime-200 p-4 flex justify-center gap-4 text-lime-600">
       <a href="https://facebook.com">Facebook
         {/* <FaFacebookF size={20} className="text-gray-800"/> */}
       </a>

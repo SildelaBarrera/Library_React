@@ -2,7 +2,7 @@
 import BookList from "../components/BookList"
 
 
-function BookPage() {
+function Books() {
     
     const styleBookPage = " border-2 border-black border-solid";
     return (
@@ -15,4 +15,4 @@ function BookPage() {
    
 }
 
-export default BookPage
+export default Books

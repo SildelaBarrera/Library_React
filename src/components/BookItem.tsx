@@ -12,8 +12,8 @@ function BookItem(props: BookItemProps) {
   const { book } = props;
   
   return (
-    <article className="m-8 border-4 border-black rounded h-40 w-20">
-      <img className="w-20 h-40" src={book.photo} alt={`Portada del libro ${book.title}`} />
+    <article className="m-8 border-2 border-black rounded w-1/2 ">
+      <img className="h-20 w-10" src={book.photo} alt={`Portada del libro ${book.title}`} />
 
       <div className="p-4 flex flex-col gap-2">
         <span className="text-2xl font-bold">{book.title}</span>
