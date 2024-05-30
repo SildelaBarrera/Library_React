@@ -5,9 +5,9 @@ function PrivateRoutes(){
     // const user = {name: "Silvia"};
     const user = null;
 
-    if(!user) return <Navigate to="/login" />
+    if(user) return <Outlet />
     
-    return <Outlet />
+    return <Navigate to="/login" /> 
 
 }
 

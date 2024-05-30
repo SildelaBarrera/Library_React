@@ -6,7 +6,7 @@ function Sidebar ({isOpenSidebar}: SidebarProps) {
 
     return (
       <>
-        <div className ="md:hidden fixed  ">
+        <div className ="md:hidden fixed ">
           <Menu isOpenSidebar = {isOpenSidebar} />
           </div>
       </>

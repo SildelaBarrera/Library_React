@@ -5,9 +5,9 @@ function PublicRoutes(){
     // const user = {name: "Silvia"};
     const user = null;
 
-    if(user) return <Navigate to="/books" />
+    if(!user) return <Outlet />
     
-    return <Outlet />
+    return <Navigate to="/books" />
 
 }
 

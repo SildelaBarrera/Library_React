@@ -7,34 +7,39 @@ type BookItemProps = {
   book: Book
 }
 
-function BookItem(props: BookItemProps) { 
-  
-  const { book } = props;
+function BookItem(props: BookItemProps) {
+  const {book} = props
+
+  const styleCard = 'h-96 w-60 m-8 p-2 flex flex-col items-center justify-center border-slate-400 border-2 rounded bg-sky-100';
   
   return (
-    <article className="m-8 border-2 border-black rounded w-1/2 ">
-      <img className="h-20 w-10" src={book.photo} alt={`Portada del libro ${book.title}`} />
+    <div className={styleCard}>
 
-      <div className="p-4 flex flex-col gap-2">
-        <span className="text-2xl font-bold">{book.title}</span>
-
-        <div className="flex items-center justify-between">
-          <span className="text-xl text-gray-600">{book.author}</span>
-          <span className="bg-teal-400 py-1 px-4 rounded-full text-white font-bold">{book.type}</span>
-        </div>
-
-        <div className="flex items-center">
-          <span className="text-2xl italic">{book.price}€</span>
-         
-          <span className="ml-auto mr-4">
-            <BiPencil className="text-indigo-700" size={20} />
-          </span>
-          <span>
-            <BiTrash className="text-red-500" size={20}/>
-          </span>
-        </div>
+      <div className="h-52 w-40 flex items-center justify-center border-2 border-slate-400 border-dotted bg-white">
+        <img className = "h-52 w-40" src={book.photo} alt={`Portada ${book.title}`} />
       </div>
-    </article>
+
+      <div className="h-20 w-full flex flex-col items-center pt-4 m-2 font-serif">
+        <p className="font-bold text-center text-cyan-600 text-sm">{book.title}</p>
+        <p className="text-cyan-700 ">{book.author}</p>
+      </div>
+
+      <div className=" flex gap-2 font-serif text-slate-500"> 
+        <span className="">{book.type} ❊ {book.price}€</span>
+        <span className="">
+            <BiPencil className="text-emerald-700" size={20} />
+        </span>
+        <span>
+            <BiTrash className="text-emerald-700" size={20}/>
+        </span>
+      </div>
+
+      <div className=" flex"> 
+        
+      </div>
+      
+
+    </div>
   )
 }
 

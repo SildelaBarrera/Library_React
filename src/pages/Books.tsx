@@ -4,12 +4,18 @@ import BookList from "../components/BookList"
 
 function Books() {
     
-    const styleBookPage = " border-2 border-black border-solid";
+    const styleBookPage = "";
     return (
-
+        <>
+        
+        <div className= "border-2 border-black h-190 w-full">
+            <h1> MY BOOKS </h1>
+        </div>
         <main className = {styleBookPage}>
             <BookList/>
         </main>
+
+        </>
     )
 
    

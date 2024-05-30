@@ -10,3 +10,16 @@
   padding: 0;
   margin: 0;
 }
+
+.custom-input {
+
+  @apply h-8 w-80 border-2 border-cyan-700 rounded;
+}
+
+/* input: invalid {
+  outline: 2px red solid;
+}
+
+input: invalid + .error{
+  outline: 2px red solid;
+} */

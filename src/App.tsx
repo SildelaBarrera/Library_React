@@ -8,8 +8,8 @@ import EditBook from "./pages/EditBook"
 import Profile from "./pages/Profile"
 import Register from "./pages/Register"
 import LogIn from "./pages/LogIn"
-import PrivateRoutes from "./components/PrivateRoutes"
-import PublicRoutes from "./components/PrivateRoutes"
+import PrivateRoutes from "./components/routes/PrivateRoutes"
+import PublicRoutes from "./components/routes/PublicRoutes"
 
 
 
@@ -25,6 +25,8 @@ function App() {
         <Routes>
           
           <Route path="/" element={<Home/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/Login" element={<LogIn/>}/>
 
           <Route element={<PrivateRoutes />}>
 
